@@ -31,7 +31,7 @@ def logPulse( channel ):
 	now = datetime.datetime.now().strftime( "%Y-%m-%d %H:%M:%S.%f"  )
 	pulseTime = "'{0}'".format( now )
 	
-	conn = psycopg2.connect( "dbname='counter' user='counter' host='localhost' password=''" )
+	conn = psycopg2.connect( "dbname='counter' user='counter' host='localhost' password='count'" )
 	cur = conn.cursor()
 	
 	
