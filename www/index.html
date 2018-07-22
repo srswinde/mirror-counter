@@ -1,0 +1,29 @@
+<html>
+<head>
+<title>Rotation Counter </title>
+<meta http-equiv="refresh" content="60" />
+<style>
+	iframe
+	{
+		width:1500px;
+		height:300px;
+	}
+	iframe.cur
+	{
+		width:250;
+		height:200;
+	}
+</style>
+
+</head>
+<body>
+	<iframe src="/current.html" class="cur"  ></iframe>
+	<br>
+	
+	<iframe src="/main.php?time=10m"  ></iframe>
+	<iframe src="/main.php?time=30m"  ></iframe>
+	<iframe src="/main.php?time=1h"></iframe>
+	<iframe src="/main.php?time=6h" ></iframe>
+	<iframe src="/main.php?time=12h" ></iframe>
+</body>
+</html>
