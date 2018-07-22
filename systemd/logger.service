@@ -1,0 +1,14 @@
+[Unit]
+
+Description= Mirror rotation counter 
+After = postgresql.server
+
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python /usr/local/bin/mcounter-logger.py
+User=root
+
+[Install]
+WantedBy=default.target
+

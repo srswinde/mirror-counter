@@ -14,7 +14,14 @@ sudo -u postgres psql -f db/setup.sql
 cp default /etc/nginx/sites-available/default
 
 cp www/* /var/www/html/
+cp logger/interrupts.py /usr/local/bin/mcounter-logger.py
+cp systemd/logger.service /etc/systemd/system/
+chmod 664 /etc/systemd/system/logger.service
+systemctl daemon-reload
+systemctl enable logger.service
+
 
 service nginx restart
 service postgresql start
 service php7.0-fpm start
+
